@@ -1,0 +1,27 @@
+doctype html
+- var categories = []
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet", href="style.css")
+    body 
+        header 
+            div(id="header")
+                h2(id="title") THE HELLDIVE
+                img(src="logo.png", id="logo")
+                each item in items
+                    unless categories.includes(item.category)
+                        - categories.push(item.category)
+                        button()=item.category
+        main 
+            each category in categories
+                h2(id=category)=category
+                div(class="cat-con")
+                    each item in items 
+                        if item.category == category 
+                            div(class="foods")
+                                img(src=item.img_path, class="food_pic")
+                                p(class="food_name")=item.name
+        footer 

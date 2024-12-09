@@ -1,0 +1,58 @@
+@font-face {
+    font-family: "Helldivers-Bold";
+    src: url(Font/Helldivers/fs_sinclair_bold-webfont.woff),
+         url(Font/Helldivers/fs_sinclair_bold-webfont.woff2);
+}
+
+@font-face {
+    font-family: "Helldivers";
+    src: url(Font/Helldivers/fs_sinclair_regular-webfont.woff),
+         url(Font/Helldivers/fs_sinclair_regular-webfont.woff2);
+}
+
+#header {
+    height: 90px;
+    width: 100%;
+    background-color: black;
+}
+
+#logo {
+    margin-left: 60px;
+    height: 40px;
+    width: 40px;
+}
+
+#title {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    color: #FFEA08;
+    font-family: "Helldivers-Bold";
+}
+
+body {
+    margin: 0px;
+    color: white;
+    font-family: "Helldivers";
+    background-image: url("background.png");
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.food_pic {
+    height: 100px;
+    width: 150px;
+}
+
+.foods {
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: rgb(91, 91, 91);
+}
+
+.cat-con {
+    margin-left: 20px;
+    width: 100%;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto auto auto;
+}
