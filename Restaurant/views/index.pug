@@ -6,22 +6,29 @@ html(lang="en")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         title Document
         link(rel="stylesheet", href="style.css")
+        script(src="scroll.js")
     body 
         header 
             div(id="header")
-                h2(id="title") THE HELLDIVE
-                img(src="logo.png", id="logo")
-                each item in items
-                    unless categories.includes(item.category)
-                        - categories.push(item.category)
-                        button()=item.category
+                div(class="logo")
+                    h2(id="title") THE HELLDIVE
+                    img(src="logo.png", id="logo")
+                div(class="button_con")
+                    each item in items
+                        unless categories.includes(item.category)
+                            - categories.push(item.category)
+                            button(class="nav_button", onclick=`scrollToCategory('${item.category}')`)=item.category
         main 
             each category in categories
-                h2(id=category)=category
+                h2(id=category, class="category_title")=category
                 div(class="cat-con")
                     each item in items 
                         if item.category == category 
                             div(class="foods")
                                 img(src=item.img_path, class="food_pic")
-                                p(class="food_name")=item.name
+                                h2(class="food_name")=item.name
+                                p(class="food_desc")=item.description
+                                div(class="price_box")
+                                    p(class="price")=item.price
+                                    img(class="price_img", src="req.png")
         footer 

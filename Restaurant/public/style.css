@@ -10,10 +10,16 @@
          url(Font/Helldivers/fs_sinclair_regular-webfont.woff2);
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 #header {
     height: 90px;
     width: 100%;
     background-color: black;
+    display: flex;
 }
 
 #logo {
@@ -38,20 +44,77 @@ body {
     background-size: 100% 100%;
 }
 
+.logo {
+    margin-left: 20px;
+}
+
+.button_con {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav_button {
+    background-color: black;
+    border-left: white 2px solid;
+    border-right: white 2px solid;
+    color: white;
+    width: 300px;
+    font-family: "Helldivers";
+    font-size: large;
+}
+
+.category_title {
+    margin-top: 50px;
+}
+
 .food_pic {
     height: 100px;
     width: 150px;
+    grid-row: 1 / span 2;
+}
+
+.food_name {
+    margin-top: 5px;
+    margin-bottom: 0px;
+    justify-self: center;
+}
+
+.food_desc {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+}
+
+.price_box {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    justify-self: center;
+    display: flex   ;
+}
+
+.price {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.price_img {
+    height: 17px;
+    width: 16px;
+    margin-top: 3px;
+    margin-left: 5px;
 }
 
 .foods {
     display: grid;
     grid-template-columns: auto auto;
     background-color: rgb(91, 91, 91);
+    width: 498px;
 }
 
 .cat-con {
-    margin-left: 20px;
-    width: 100%;
+    margin-left: 10px;
+    width: 98%;
     display: grid;
     gap: 10px;
     grid-template-columns: auto auto auto;
